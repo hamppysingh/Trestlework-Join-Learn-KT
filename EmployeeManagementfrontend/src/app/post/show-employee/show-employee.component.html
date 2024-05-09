@@ -1,0 +1,24 @@
+<div *ngIf="emp">
+  <h1 class="m-5 text-center">Employee Detail</h1>
+  <div class="row m-2">
+    <div class="col-md-4">
+      <img [src]="emp.imageUrl" alt="Employee Image" *ngIf="emp.imageUrl" class="img-thumbnail">
+    </div>
+    <div class="col-md-8"><br>
+      <p>ID: {{ emp.id }}</p>
+      <p>Name: {{ emp.name }}</p>
+      <p>Email: {{ emp.email }}</p>
+      <p>Job Title: {{ emp.jobTitle }}</p>
+      <p>Phone: {{ emp.phone }}</p>
+      <p>Employee Code: {{ emp.empcode }}</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="error">
+  <h2>Error</h2>
+  <p>{{ error }}</p>
+</div>
+
+<div *ngIf="!emp && !error">
+  <h2>Loading Employee...</h2>
+</div>
