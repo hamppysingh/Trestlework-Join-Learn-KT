@@ -1,0 +1,8 @@
+package com.tretle.tech.ProductService.pojo;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(value="product")
+public class Product {
+
+}

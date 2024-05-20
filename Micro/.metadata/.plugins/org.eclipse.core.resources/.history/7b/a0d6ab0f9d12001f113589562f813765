@@ -1,0 +1,32 @@
+package com.tretle.tech.ProductService.service;
+
+import org.springframework.stereotype.Service;
+
+import com.tretle.tech.ProductService.Repository.ProductRepository;
+import com.tretle.tech.ProductService.dto.ProductRequest;
+import com.tretle.tech.ProductService.pojo.Product;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class ProductService {
+	
+	private final ProductRepository productRepository;
+	
+	
+	
+     public ProductService(ProductRepository productRepository) {
+		this.productRepository = productRepository;
+	}
+
+
+
+	public void createProduct(ProductRequest productRequest) {
+    	 Product product=Product.builder()
+    			 .name(productRequest.getName())
+    			 .desc(ProductRequest.getDesc())
+    			 .price(productRequest.getPrice())
+    			 .build();
+     }
+}

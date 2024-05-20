@@ -1,0 +1,5 @@
+package com.trestle.tech.employeemanager.service;
+
+public interface EmployeeService {
+
+}

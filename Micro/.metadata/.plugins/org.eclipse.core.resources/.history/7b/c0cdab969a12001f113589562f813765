@@ -1,0 +1,5 @@
+package com.tretle.tech.ProductService.pojo;
+
+public class Product {
+
+}

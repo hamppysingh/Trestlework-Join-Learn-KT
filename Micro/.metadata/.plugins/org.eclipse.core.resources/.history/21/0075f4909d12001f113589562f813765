@@ -1,0 +1,15 @@
+package com.tretle.tech.ProductService.dto;
+
+import java.math.BigDecimal;
+
+import lombok.*;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor 
+public class ProductRequest {
+	 private String name;
+	   private String desc;
+	   private BigDecimal price;
+}

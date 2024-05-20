@@ -1,0 +1,10 @@
+management.endpoints.web.exposure.include=*
+server.port=9000
+spring.jpa.database=POSTGRESQL
+spring.datasource.url=jdbc:postgresql://localhost:7200/employeemanager
+spring.datasource.username=postgres  # Adjust username if needed
+spring.datasource.password=password  # Adjust password if needed
+spring.jpa.show-sql=true
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect

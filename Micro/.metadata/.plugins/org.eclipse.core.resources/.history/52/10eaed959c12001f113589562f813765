@@ -1,0 +1,8 @@
+package com.tretle.tech.ProductService.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ProductService {
+     
+}

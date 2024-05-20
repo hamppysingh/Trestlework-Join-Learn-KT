@@ -1,0 +1,6 @@
+package com.tretle.tech.ProductService.pojo;
+
+@Document(value="product")
+public class Product {
+
+}

@@ -1,0 +1,5 @@
+package com.tretle.tech.ProductService.service;
+
+public class ProductService {
+
+}

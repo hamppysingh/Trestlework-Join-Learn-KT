@@ -1,0 +1,96 @@
+package com.trestle.tech.employeemanager.tests;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+
+import com.trestle.tech.employeemanager.Pojo.Employee;
+import com.trestle.tech.employeemanager.repository.EmployeeRepository;
+
+@ExtendWith(MockitoExtension.class)
+public class Mokitousecase {
+
+    @Mock
+    private EmployeeRepository emprepo;
+
+    @InjectMocks
+    private EmployeeService employeeService = new EmployeeServiceImpl(emprepo);
+
+    @Test
+    public void testAddEmployee() {
+        Employee emp = new Employee("John Doe", "john.doe@example.com", "Software Engineer", "+1234567890", null);
+        String expectedEmpCode = UUID.randomUUID().toString(); // Generate random code for testing
+        when(emprepo.save(emp)).thenReturn(emp.setEmpcode(expectedEmpCode));
+
+        Employee savedEmp = employeeService.addEmployee(emp);
+
+        assertEquals(expectedEmpCode, savedEmp.getEmpcode());
+        verify(emprepo, times(1)).save(emp);
+    }
+
+    @Test
+    public void testFindAllEmployees() {
+        List<Employee> mockEmployees = new ArrayList<>();
+        mockEmployees.add(new Employee("Jane Smith", "jane.smith@example.com", "Project Manager", "+9876543210", null));
+        mockEmployees.add(new Employee("Mike Jones", "mike.jones@example.com", "QA Engineer", "+5678901234", null));
+
+        when(emprepo.findAll()).thenReturn(mockEmployees);
+
+        List<Employee> allEmployees = employeeService.findAllEmployees();
+
+        assertEquals(2, allEmployees.size());
+        verify(emprepo, times(1)).findAll();
+    }
+
+    @Test
+    public void testUpdateEmployee() {
+        Employee existingEmp = new Employee(1L, "John Doe", "john.doe@example.com", "Software Engineer", "+1234567890", null);
+        Employee updatedEmp = new Employee(1L, "John Doe", "john.doe@updated.com", "Senior Engineer", "+1234567890", null);
+
+        when(emprepo.findById(existingEmp.getId())).thenReturn(Optional.of(existingEmp));
+        when(emprepo.save(updatedEmp)).thenReturn(updatedEmp);
+
+        Employee returnedEmp = employeeService.updateEmployee(updatedEmp);
+
+        assertEquals("john.doe@updated.com", returnedEmp.getEmail());
+        verify(emprepo, times(1)).findById(existingEmp.getId());
+        verify(emprepo, times(1)).save(updatedEmp);
+    }
+
+    @Test
+    public void testFindEmployeeById_Success() {
+        Long id = 1L;
+        Employee mockEmployee = new Employee(id, "John Doe", "john.doe@example.com", "Software Engineer", "+1234567890", null);
+
+        when(emprepo.findById(id)).thenReturn(Optional.of(mockEmployee));
+
+        Employee foundEmployee = employeeService.findEmployeeById(id);
+
+        assertEquals(id, foundEmployee.getId());
+        assertEquals("John Doe", foundEmployee.getName());
+    }
+
+    @Test
+    public void testFindEmployeeById_NotFound() {
+        Long id = 1L;
+        when(emprepo.findById(id)).thenReturn(Optional.empty());
+
+        assertThrows(UserNotFoundException.class, () -> employeeService.findEmployeeById(id));
+    }
+
+    // Add similar test cases for other methods like deleteEmployee, getEmployees, sortBasedUponSomeField, and paginationBasedData
+
+}

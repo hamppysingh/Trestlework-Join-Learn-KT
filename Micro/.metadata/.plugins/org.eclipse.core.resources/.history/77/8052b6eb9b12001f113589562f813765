@@ -1,0 +1,9 @@
+package com.tretle.tech.ProductService.dto;
+
+import lombok.*;
+
+@Data
+@
+public class ProductRequest {
+	
+}

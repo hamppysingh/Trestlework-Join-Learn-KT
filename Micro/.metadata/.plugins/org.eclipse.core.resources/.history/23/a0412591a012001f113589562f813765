@@ -1,0 +1,58 @@
+package com.tretle.tech.ProductService.service;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.tretle.tech.ProductService.Repository.ProductRepository;
+import com.tretle.tech.ProductService.dto.ProductRequest;
+import com.tretle.tech.ProductService.dto.ProductResponse;
+import com.tretle.tech.ProductService.pojo.Product;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class ProductService {
+	
+	private final ProductRepository productRepository;
+	
+	
+	
+     public ProductService(ProductRepository productRepository) {
+		this.productRepository = productRepository;
+	}
+
+
+
+	public void createProduct(ProductRequest productRequest) {
+    	 Product product=Product.builder()
+    			 .name(productRequest.getName())
+    			 .desc(productRequest.getDesc())
+    			 .price(productRequest.getPrice())
+    			 .build();
+    	 productRepository.save(product);
+    	 log.info("Product {} is saved",product.getId());
+     }
+
+
+	public List<ProductResponse> getAllProducts() {
+		// TODO Auto-generated method stub
+		List<Product> p=productRepository.findAll();
+		p.stream().map(product -> mapToProductResponse(product))
+		
+	}
+	private ProductResponse mapToProductResponse(Product product)
+	{
+		return ProductResponse.builder()
+				.id(product.getId())
+				.name(product.getName())
+   			 .desc(product.getDesc())
+   			 .price(product.getPrice())
+   			 .build();
+	}
+}

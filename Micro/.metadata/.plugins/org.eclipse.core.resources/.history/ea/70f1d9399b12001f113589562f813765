@@ -1,0 +1,5 @@
+package com.tretle.tech.ProductService.Repository;
+
+public interface ProductRepository extends MongoRepository<Product,String>{
+
+}

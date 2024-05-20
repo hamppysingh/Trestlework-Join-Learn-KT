@@ -1,0 +1,29 @@
+package com.trestle.tech.employeemanager.tests;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.trestle.tech.employeemanager.Pojo.Employee;
+
+class Hello {
+	 Employee employee = new Employee();
+     employee.setName("John Doe");
+     employee.setEmail("john.doe@example.com");
+     employee.setJobTitle("Software Engineer");
+     employee.setPhone("+1234567890");
+     employee.setImageUrl("https://example.com/image.jpg");
+     employee.setEmpcode("EMP001");
+
+     // Assert values
+     assertEquals("John Doe", employee.getName());
+     assertEquals("john.doe@example.com", employee.getEmail());
+     assertEquals("Software Engineer", employee.getJobTitle());
+     assertEquals("+1234567890", employee.getPhone());
+     assertEquals("https://example.com/image.jpg", employee.getImageUrl());
+	@Test
+	void test() {
+		assertTrue(e.getName(),"");
+	}
+
+}

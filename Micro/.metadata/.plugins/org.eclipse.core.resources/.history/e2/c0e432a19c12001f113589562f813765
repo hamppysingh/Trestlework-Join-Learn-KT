@@ -1,0 +1,16 @@
+package com.tretle.tech.ProductService.service;
+
+import org.springframework.stereotype.Service;
+
+import com.tretle.tech.ProductService.dto.ProductRequest;
+import com.tretle.tech.ProductService.pojo.Product;
+
+@Service
+public class ProductService {
+	
+	private final ProductRepository productRepository;
+	
+     public void createProduct(ProductRequest productRequest) {
+    	 Product product=Product.builder().name(productRequest.getName())
+     }
+}
