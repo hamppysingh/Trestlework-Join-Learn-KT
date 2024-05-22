@@ -17,7 +17,7 @@ import org.springframework.data.redis.serializer.GenericToStringSerializer;
 @Configuration
 @ComponentScan("com.trestle.redis.Caching")
 @EnableRedisRepositories(basePackages = "com.trestle.redis.Caching")
-@PropertySource("classpath:application.properties")
+//@PropertySource("classpath:application.properties")
 public class RedisConfig {
 
     @Bean
