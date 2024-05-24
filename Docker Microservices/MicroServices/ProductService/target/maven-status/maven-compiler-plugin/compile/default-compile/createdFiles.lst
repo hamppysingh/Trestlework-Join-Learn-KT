@@ -1,0 +1,10 @@
+com/tretle/tech/ProductService/dto/ProductRequest$ProductRequestBuilder.class
+com/tretle/tech/ProductService/controller/ProductController.class
+com/tretle/tech/ProductService/dto/ProductResponse.class
+com/tretle/tech/ProductService/pojo/Product$ProductBuilder.class
+com/tretle/tech/ProductService/dto/ProductResponse$ProductResponseBuilder.class
+com/tretle/tech/ProductService/Repository/ProductRepository.class
+com/tretle/tech/ProductService/service/ProductService.class
+com/tretle/tech/ProductService/ProductServiceApplication.class
+com/tretle/tech/ProductService/dto/ProductRequest.class
+com/tretle/tech/ProductService/pojo/Product.class

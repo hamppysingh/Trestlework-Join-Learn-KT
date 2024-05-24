@@ -1,0 +1,7 @@
+com/tretle/tech/inventoryservice/dto/InventoryResponse$InventoryResponseBuilder.class
+com/tretle/tech/inventoryservice/service/InventoryService.class
+com/tretle/tech/inventoryservice/repository/InventoryRepository.class
+com/tretle/tech/inventoryservice/controller/InventoryController.class
+com/tretle/tech/inventoryservice/dto/InventoryResponse.class
+com/tretle/tech/inventoryservice/InventoryServiceApplication.class
+com/tretle/tech/inventoryservice/pojo/Inventory.class

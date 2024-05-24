@@ -1,0 +1,12 @@
+com/tretle/tech/OrderService/event/OrderPlacedEvent.class
+com/tretle/tech/OrderService/controller/OrderController.class
+com/tretle/tech/OrderService/pojo/Order.class
+com/tretle/tech/OrderService/config/WebClientConfig.class
+com/tretle/tech/OrderService/service/OrderService.class
+com/tretle/tech/OrderService/OrderServiceApplication.class
+com/tretle/tech/OrderService/dto/OrderRequest.class
+com/tretle/tech/OrderService/dto/InventoryResponse$InventoryResponseBuilder.class
+com/tretle/tech/OrderService/dto/OrderLineItemsDto.class
+com/tretle/tech/OrderService/dto/InventoryResponse.class
+com/tretle/tech/OrderService/repository/OrderRepository.class
+com/tretle/tech/OrderService/pojo/OrderLineItems.class
