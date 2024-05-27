@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3331bd91-91f4-4db8-97d9-f94604704325" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2grwJVFPKtwoapKnEB3EbwYp8Rj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DiscoveryServer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.InventoryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.api-gateway: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.discovery-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.mongodb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.mysql: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.kafka-docker-compose.yml.zookeeper: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.OrderService [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.OrderService [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ProductService [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ProductService [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateway [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery-server [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.inventory-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.inventory-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.notification-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.notification-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/praveen-kumar/Tretlework Rough Test/Trestlework-Join-Learn-KT/Docker Microservices/MicroServices&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/prometheus" />
+      <recent name="$PROJECT_DIR$/prometheus/prometheus.yml" />
+      <recent name="$PROJECT_DIR$/Prometheus" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3331bd91-91f4-4db8-97d9-f94604704325" name="Changes" comment="" />
+      <created>1716468934999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716468934999</updated>
+    </task>
+    <servers />
+  </component>
+</project>

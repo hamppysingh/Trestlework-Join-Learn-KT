@@ -1,6 +1,6 @@
-/home/praveen-kumar/Tretlework Rough Test/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/repository/InventoryRepository.java
-/home/praveen-kumar/Tretlework Rough Test/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/InventoryServiceApplication.java
-/home/praveen-kumar/Tretlework Rough Test/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/pojo/Inventory.java
-/home/praveen-kumar/Tretlework Rough Test/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/controller/InventoryController.java
-/home/praveen-kumar/Tretlework Rough Test/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/service/InventoryService.java
-/home/praveen-kumar/Tretlework Rough Test/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/dto/InventoryResponse.java
+/home/praveen-kumar/Tretlework Rough Test/Trestlework-Join-Learn-KT/Docker Microservices/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/InventoryServiceApplication.java
+/home/praveen-kumar/Tretlework Rough Test/Trestlework-Join-Learn-KT/Docker Microservices/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/pojo/Inventory.java
+/home/praveen-kumar/Tretlework Rough Test/Trestlework-Join-Learn-KT/Docker Microservices/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/repository/InventoryRepository.java
+/home/praveen-kumar/Tretlework Rough Test/Trestlework-Join-Learn-KT/Docker Microservices/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/service/InventoryService.java
+/home/praveen-kumar/Tretlework Rough Test/Trestlework-Join-Learn-KT/Docker Microservices/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/dto/InventoryResponse.java
+/home/praveen-kumar/Tretlework Rough Test/Trestlework-Join-Learn-KT/Docker Microservices/MicroServices/inventory-service/src/main/java/com/tretle/tech/inventoryservice/controller/InventoryController.java
