@@ -1,0 +1,109 @@
+# my global config
+global:
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+      - targets: ["localhost:9093"]
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  
+  - './alert.rules.yml' 
+ 
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: "node_exporter"
+    static_configs:
+      - targets: ["localhost:9100"]
+
+  - job_name: 'BCB_FR'
+    static_configs:
+      - targets: ["172.16.3.101:9100","172.16.3.103:9100","172.16.2.105:9100","172.16.21.101:9100","172.16.21.102:9100","172.16.21.67:9100"]
+        labels:
+          alias: 'BCB_FR'        
+
+
+  - job_name: "Open-api-gateway"
+    scheme: https
+    metrics_path: '/actuator/metrics'
+    scrape_interval: 5s
+    tls_config:
+      insecure_skip_verify: true
+    static_configs:
+    - targets: ["172.16.3.101:8888", "172.16.3.103:8888"]
+      labels:
+        application: "Open-api-gateway"
+
+
+  - job_name: "Case-manager-service"
+    metrics_path: '/actuator/metrics'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["172.16.3.101:8099", "172.16.3.103:8099"]
+      labels:
+        application: "Case-manager-service"
+
+  - job_name: "Alert-consumer-service"
+    metrics_path: '/actuator/metrics'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["172.16.3.101:7077", "172.16.3.103:7077"]
+      labels:
+        application: "Alert-consumer-service"
+
+  - job_name: "Access-control-service"
+    metrics_path: '/actuator/metrics'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["172.16.3.101:8181", "172.16.3.103:8181"]
+      labels:
+        application: "Access-control-service"
+
+  - job_name: "Efrm-api-interface-service"
+    metrics_path: '/actuator/metrics'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["172.16.3.101:8454", "172.16.3.103:8454"]
+      labels:
+        application: "Efrm-api-interface-service"
+
+  - job_name: "Challenge-service"
+    metrics_path: '/actuator/metrics'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["172.16.3.101:7078", "172.16.3.103:7078"]
+      labels:
+        application: "Challenge-service"
+
+  - job_name: "Portal-gateway-service"
+    metrics_path: '/actuator/metrics'
+    scrape_interval: 5s
+    scheme: https
+    tls_config:
+      insecure_skip_verify: true
+    static_configs:
+    - targets: ["172.16.3.101:7683", "172.16.3.103:7683"]
+      labels:
+        application: "Portal-gateway-service"
+
+
+
