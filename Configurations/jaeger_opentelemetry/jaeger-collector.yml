@@ -1,0 +1,15 @@
+version: "3.5"
+services:
+
+  jaeger-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    command:
+      - --config=/etc/otelcol-contrib/otel-collector.yml
+    volumes:
+      - /home/saurabh/FRM/jaeger_opentelemetry/otel-collector.yml:/etc/otelcol-contrib/otel-collector.yml
+    ports:
+      - "4317:4317"
+      - "4318:4318"
+    restart: always

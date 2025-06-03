@@ -1,0 +1,40 @@
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 1m
+    static_configs:
+      - targets: ['localhost:9090']
+  - job_name: 'grafana'
+    scrape_interval: 1m
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['grafana:3000']
+  - job_name: 'case-manager-service'
+    scrape_interval: 1m
+    #scrape_timeout: 10s
+    metrics_path: '/actuator/metrics'
+    static_configs:
+      - targets: ['192.168.1.59:8099']
+  - job_name: 'efrm-api-interface'
+    scrape_interval: 1m
+    #scrape_timeout: 10s
+    metrics_path: '/actuator/metrics'
+    static_configs:
+      - targets: ['192.168.1.59:8454']
+  - job_name: 'access-control-service'
+    scrape_interval: 1m
+    #scrape_timeout: 10s
+    metrics_path: '/actuator/metrics'
+    static_configs:
+      - targets: ['192.168.1.59:8181']
+  - job_name: 'efrm-card-interface'
+    scrape_interval: 1m
+    #scrape_timeout: 10s
+    metrics_path: '/actuator/metrics'
+    static_configs:
+      - targets: ['localhost:8123']
+  - job_name: 'neft-simulator'
+    scrape_interval: 1m
+    #scrape_timeout: 10s
+    metrics_path: '/actuator/metrics'
+    static_configs:
+      - targets: ['192.168.1.59:7878']

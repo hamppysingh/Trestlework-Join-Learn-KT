@@ -1,0 +1,23 @@
+version: '3.0'
+
+services:
+  ibmmq1:
+    image: 'docker.io/ibmcom/mq'
+    environment:
+      - LICENSE=accept
+      - MQ_QMGR_NAME=STPQMGR 
+      - MQ_DEV=false
+    ports:
+      - '1414:1414'
+      - '9443:9443'
+    volumes:
+      - /home/saurabh/frm-mq:/data/ibmmq
+      - ./frm-config.mqsc:/etc/mqm/custom-config.mqsc
+    command: mqsc < /etc/mqm/custom-config.mqsc
+    container_name: frm-mq
+    restart: always
+
+volumes:
+  ibmmq:
+    driver: local
+

@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  jaeger-allinone:
+    image: jaegertracing/all-in-one:latest
+    environment:
+      - SPAN_STORAGE_TYPE=elasticsearch
+      - COLLECTOR_OTLP_ENABLED=true
+      - LOG_LEVEL=debug
+      - ES_SERVER_URLS=http://192.168.1.59:9200  # Elasticsearch service name and port
+      - ES_INDEX=jaeger-span-%Y-%m-%d
+    ports:
+      - 16686:16686
+      - 14317:4317

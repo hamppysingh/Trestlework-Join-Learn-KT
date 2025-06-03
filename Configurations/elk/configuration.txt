@@ -1,0 +1,2 @@
+sudo chmod go-w ./filebeat/filebeat.docker.yml
+sudo chown root ./filebeat/filebeat.docker.yml

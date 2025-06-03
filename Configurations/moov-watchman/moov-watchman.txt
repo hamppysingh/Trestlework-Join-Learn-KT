@@ -1,0 +1,1 @@
+docker run -p 8084:8084 -p 9094:9094 moov/watchman:latest
